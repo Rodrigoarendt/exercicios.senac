@@ -1,0 +1,20 @@
+npm init -y  = criar arquivo de configuração;
+npx tsc;
+npm i express @types/express;
+
+npx tsc -w = compila tsc automaticamente
+
+npm i typeorm mysql reflect-metadata
+
+
+
+import * as express from "express"
+const app = express()
+import users from './usuarios'
+
+app.use(express.json())
+app.use("/user", users)
+
+
+const PORT = process.env.PORT
+app.listen(PORT, () => {console.log(`Executando em http://localhost:${PORT}`)})
